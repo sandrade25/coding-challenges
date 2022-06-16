@@ -7,5 +7,5 @@ find the corresponding fibonnaci number
 dont use recersive method
 """
 
-def fibonnaci(arr):
+def fibonnaci(n):
     pass
