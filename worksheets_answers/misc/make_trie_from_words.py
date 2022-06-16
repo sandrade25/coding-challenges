@@ -7,4 +7,12 @@ make a trie
 """
 
 def make_trie(words):
-    pass
+    tr = {}
+
+    for word in words:
+        node = tr
+        for ch in word:
+            node[ch] = node.get(ch, {})
+            node = node[ch]
+        node['*'] = {}
+    return tr
