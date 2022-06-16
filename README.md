@@ -1,16 +1,28 @@
-# coding-challenges
+# coding-challenges for the sake of studying/practicing for FAANG related tests
 
-## data structures:
+
+## Instructions:
+- complete all the worksheets in directory `./worksheets/`
+- system uses pytest for validating answers. 
+  - run `pytest` to test everything. 
+  - run `pytest tests/test_worksheets/test_{worksheet section}.py` to test a specific section you are working on. 
+  - you can add `::Test{class name}::test_{function name}` to test a specific function worksheet you are working on.
+- if you wish to revert your worksheets back to empty, run: `python revert_worksheets.py`
+----
+
+## Material covered:
+
+### data structures:
 - arrays
-- queues
-- stacks
+- queues*
+- stacks*
 - trees
-- hash tables
+- hash tables*
 - graphs
 - binary trees
 - tries
   
-## algorithms:
+### algorithms:
 - traversals
 - divide and conquer
 - breadth first search
@@ -20,7 +32,7 @@
 - bubble sort
 - merge sort
 
-## must have priorities:
+### must have priorities:
 - hash tables
 - linked lists
 - big O notation
@@ -33,3 +45,7 @@
 - recursion
 - stacks/queues
 -  Questions involving bit manipulation are rare but are encountered from time to time.
+
+
+-----
+`* will come later`
