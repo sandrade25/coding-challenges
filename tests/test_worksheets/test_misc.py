@@ -25,22 +25,21 @@ class TestMisc:
         assert fibonnaci(79) == fibonnaci_a(79)
 
     def test_make_trie(self, list_of_words):
-        random_list_1 = []
-        random_list_2 = []
-        random_list_3 = []
+        random_list_1 = random.choices(list_of_words, k=10)
+        random_list_2 = random.choices(list_of_words, k=10)
+        random_list_3 = random.choices(list_of_words, k=10)
         assert make_trie(random_list_1) is not None
         assert make_trie_a(random_list_1) is not None
         assert make_trie(random_list_1) == make_trie_a(random_list_1)
         assert make_trie(random_list_2) == make_trie_a(random_list_2)
         assert make_trie(random_list_3) == make_trie_a(random_list_3)
 
-    def test_get_words_from_trie(self, tries):
-        for trie in tries:
-            user = get_words_from_trie(trie)
-            answer = get_words_from_trie_a(trie)
-            assert user is not None
-            assert answer is not None
-            assert user == answer
+    def test_get_words_from_trie(self, trie):
+        user = get_words_from_trie(trie)
+        answer = get_words_from_trie_a(trie)
+        assert user is not None
+        assert answer is not None
+        assert user == answer
 
     def test_longest_common_subtring(self, list_of_words):
         words = [
