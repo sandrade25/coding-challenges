@@ -4,7 +4,7 @@ sys.path.append("../../")
 from useables.linked_node import DoubleLinkedList, LinkedNode, DoubleLinkedNode, LinkedList
 import random
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def list_of_words():
     return ['you', 'your', 'cannot', 'can', 'cause', 'convey', 'corruptions', 'composition', 'create', 'first', 'for',
         'foundation', 'functions', 'familial', 'from', 'information', 'in', 'into', 'idea', 'ideas', 'is', 'important',
@@ -16,7 +16,7 @@ def list_of_words():
         'recurrent', 'relationship', 'relationships', 'related', 'reader', 'remind', 'keep', 'known', 'that', 'thesis',
         'the', 'there', 'this', 'techniques', 'trying', 'to', 'like', 'else', 'every', 'each', 'germination']
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def trie(list_of_words):
     tr = {}
 
@@ -29,17 +29,17 @@ def trie(list_of_words):
     return tr 
 
     
-@pytest.fixture
+@pytest.fixture(scope="function")
 def linked_list():
     return LinkedList(size=10)
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def double_linked_list():
     return DoubleLinkedList(size=10)
 
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def graph():
     return {
         "a": ["b", "c", "d"],
@@ -49,7 +49,7 @@ def graph():
         "e": ["b"]
     }
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def binary_tree():
     return {
         "a": ["b", "c"],
@@ -67,10 +67,10 @@ def binary_tree():
     }
 
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def unsorted_list():
     return [random.randint(1, 100) for i in range(250)]
 
-@pytest.fixture
+@pytest.fixture(scope="function")
 def sorted_list():
     return [i for i in range(250)]
