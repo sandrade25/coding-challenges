@@ -17,6 +17,7 @@ def delete_double_linked_list(llist, position):
     while node and curr_position < position:
         prev_node = node
         node = node.next
+        curr_position += 1
 
     if curr_position == position and node:
         next = node.next
