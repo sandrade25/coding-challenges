@@ -35,3 +35,32 @@ def linked_list():
 @pytest.fixture
 def double_linked_list():
     return DoubleLinkedList(size=10)
+
+
+
+@pytest.fixture
+def graph():
+    return {
+        "a": ["b", "c", "d"],
+        "b": ["a", "e", "d"],
+        "c": ["d", "a"],
+        "d": ["a", "b", "c"],
+        "e": ["b"]
+    }
+
+@pytest.fixture
+def binary_tree():
+    return {
+        "a": ["b", "c"],
+        "b": ["d", "e"],
+        "c": ["f", "g"],
+        "d": ["h", "i"],
+        "e": ["j", "k"],
+        "f": ["l"],
+        "g": [],
+        "h": [],
+        "i": [],
+        "j": [],
+        "k": [],
+        "l": []
+    }
