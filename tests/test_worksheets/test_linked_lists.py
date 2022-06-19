@@ -37,6 +37,8 @@ class TestLinkedLists:
         answer2.revert()
 
         user_answer1 = delete_double_linked_list(double_linked_list, 100)
+        assert user_answer1 is not None, "solution not yet provided"
+
         user_answer1_order = get_data_order(user_answer1)
 
         user_answer2 = delete_double_linked_list(double_linked_list, 5)
@@ -57,6 +59,8 @@ class TestLinkedLists:
         answer2.revert()
 
         user_answer1 = delete_linked_list(linked_list, 100)
+        assert user_answer1 is not None, "solution not yet provided"
+
         user_answer1_order = get_data_order(user_answer1)
 
         user_answer2 = delete_linked_list(linked_list, 5)
@@ -77,6 +81,8 @@ class TestLinkedLists:
         answer2.revert()
 
         user_answer1 = insert_double_linked_list(double_linked_list, 100, 1111)
+        assert user_answer1 is not None, "solution not yet provided"
+
         user_answer1_order = get_data_order(user_answer1)
 
         user_answer2 = insert_double_linked_list(double_linked_list, 5, 1111)
@@ -97,6 +103,8 @@ class TestLinkedLists:
         answer2.revert()
 
         user_answer1 = insert_linked_list(linked_list, 100, 1111)
+        assert user_answer1 is not None, "solution not yet provided"
+
         user_answer1_order = get_data_order(user_answer1)
 
         user_answer2 = insert_linked_list(linked_list, 5, 1111)
@@ -113,7 +121,8 @@ class TestLinkedLists:
         reverse_double_linked_list_a(double_linked_list)
 
         user = reverse_double_linked_list(double_linked_list)
-        assert user is not None
+        assert user is not None, "solution not yet provided"
+
         new_order_user = get_data_order(user)
 
         assert new_order_user == new_order_answer
@@ -130,7 +139,7 @@ class TestLinkedLists:
         assert original_order == get_data_order(linked_list)
 
         user = reverse_single_linked_list(linked_list)
-        assert user is not None
+        assert user is not None, "solution not yet provided"
 
         new_order_user = get_data_order(user)
 

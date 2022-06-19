@@ -23,8 +23,9 @@ class TestTrees:
         answer2 = []
         depth_first_traversal_a(binary_tree, 'a', answer2)
 
-        user1 = []
-        depth_first_traversal(graph, 'a', user1)
+        user1 = depth_first_traversal(graph, 'a')
+        assert user1 is not None, "solution not yet provided"
+
         user2 = []
         depth_first_traversal(binary_tree, 'a', user2)
 
@@ -36,17 +37,22 @@ class TestTrees:
         answer2 = breadth_first_traversal_a(binary_tree, 'a')
 
         user1 = breadth_first_traversal(graph, 'a')
+        assert user1 is not None, "solution not yet provided"
+
         user2 = breadth_first_traversal(binary_tree, 'a')
 
         assert user1 == answer1
         assert user2 == answer2
 
+    @pytest.mark.skip(reason="not yet implemented")
     def test_breadth_first_island_count(self):
         raise NotImplementedError
 
+    @pytest.mark.skip(reason="not yet implemented")
     def test_depth_first_cycle(self):
         raise NotImplementedError
 
+    @pytest.mark.skip(reason="not yet implemented")
     def test_binary_verification(self):
         raise NotImplementedError
 
