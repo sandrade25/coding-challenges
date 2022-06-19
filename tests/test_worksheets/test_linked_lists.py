@@ -80,6 +80,10 @@ class TestLinkedLists:
         answer2_order = get_data_order(answer2)
         answer2.revert()
 
+        answer3 = insert_double_linked_list_a(double_linked_list, 0, 1111)
+        answer3_order = get_data_order(answer3)
+        answer3.revert()
+
         user_answer1 = insert_double_linked_list(double_linked_list, 100, 1111)
         assert user_answer1 is not None, "solution not yet provided"
 
@@ -89,8 +93,15 @@ class TestLinkedLists:
         user_answer2_order = get_data_order(user_answer2)
         user_answer2.revert()
 
+        user_answer3 = insert_double_linked_list(double_linked_list, 0, 1111)
+        user_answer3_order = get_data_order(user_answer3)
+        user_answer3.revert()
+
         assert user_answer1_order == answer1_order
         assert user_answer2_order == answer2_order
+        assert answer3_order == user_answer3_order
+        assert answer3_order[0] == 1111
+        assert user_answer3_order[0] == 1111
 
     def test_insert_linked_list(self, linked_list):
         original_order = get_data_order(linked_list)

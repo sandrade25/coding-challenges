@@ -17,9 +17,13 @@ def insert_double_linked_list(llist, position, data):
         node = node.next
         curr_position += 1
 
-    if curr_position == position and node:
+    if curr_position == position:
         new_node = DoubleLinkedNode(data=data, previous_node=prev_node, next_node=node)
-        prev_node.next = new_node
-        node.prev = new_node
+        if prev_node:
+            prev_node.next = new_node
+        else:
+            llist.head = new_node
+        if node:
+            node.prev = new_node
 
     return llist
