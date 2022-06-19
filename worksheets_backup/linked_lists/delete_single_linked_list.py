@@ -1,3 +1,6 @@
+import sys
+sys.path.append("../../")
+from useables.linked_node import LinkedNode
 
 
 

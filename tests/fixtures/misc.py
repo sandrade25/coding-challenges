@@ -1,4 +1,7 @@
 import pytest
+import sys
+sys.path.append("../../")
+from useables.linked_node import DoubleLinkedList, LinkedNode, DoubleLinkedNode, LinkedList
 
 @pytest.fixture
 def list_of_words():
@@ -25,3 +28,10 @@ def trie(list_of_words):
     return tr 
 
     
+@pytest.fixture
+def linked_list():
+    return LinkedList(size=10)
+
+@pytest.fixture
+def double_linked_list():
+    return DoubleLinkedList(size=10)

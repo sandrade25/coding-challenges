@@ -8,6 +8,9 @@
   - run `pytest tests/test_worksheets/test_{worksheet section}.py` to test a specific section you are working on. 
   - you can add `::Test{class name}::test_{function name}` to test a specific function worksheet you are working on.
 - if you wish to revert your worksheets back to empty, run: `python revert_worksheets.py`
+- ATTENTION! 
+  - You should only have to modify the code within the files in `worksheets/` if you believe you have to touch any of the other files outside that directory, please contact owner.
+  - or if you feel comfortable and have the appropriate access, you can submit an issue, or put in a PullRequest for a new branch as needed.
 ----
 
 ## Material covered:
