@@ -34,3 +34,4 @@ def merge_sort(arr):
             arr[k] = r[j]
             j += 1
             k += 1
+    return arr

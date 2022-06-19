@@ -4,9 +4,8 @@
 """
 given an array
 sort it using divide and conquer merge sort. 
-count how many swaps take place. 
-return the count of swaps. 
+no return. sort in place
 """
 
 def merge_sort(arr):
-    pass
+    return "not implemented"

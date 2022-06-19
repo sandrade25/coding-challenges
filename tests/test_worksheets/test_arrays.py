@@ -75,14 +75,15 @@ class TestArrays:
         assert l2_a != l2
         assert l2_a == l1_a
 
-        answer = merge_sort_a(l1)
+        merge_sort_a(l1)
+        
         assert l1_a == l1
 
-        user = merge_sort(l2)
-        assert user is not None, "solution not yet provided"
+        test = merge_sort(l2)
+        assert test != "not implemented", "solution not yet provided"
         assert l2_a == l2
 
-        assert answer == user
+        assert l1 == l2
 
     def test_quick_sort(self, unsorted_list):
         l1 = unsorted_list.copy()
@@ -98,14 +99,14 @@ class TestArrays:
         assert l2_a != l2
         assert l2_a == l1_a
 
-        answer = quick_sort_a(l1)
+        quick_sort_a(l1)
         assert l1_a == l1
 
-        user = quick_sort(l2)
-        assert user is not None, "solution not yet provided"
+        test = quick_sort(l2)
+        assert test != "not implemented", "solution not yet provided"
         assert l2_a == l2
 
-        assert answer == user
+        assert l2 == l1
 
     @pytest.mark.skip(reason="not yet implemented")
     def test_array_manipulation(self):

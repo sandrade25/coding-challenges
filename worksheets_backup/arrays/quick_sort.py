@@ -4,9 +4,9 @@
 """
 given an array
 sort it using quick sort. 
-count how many swaps take place. 
-return the count of swaps. 
+sort in place. no return
+recursive function required
 """
 
 def quick_sort(arr):
-    pass
+    return "not implemented"
