@@ -7,5 +7,30 @@ return True if found. and what position.
 return False, None if not found
 """
 
+def bsearch(arr, start, end, ele):
+    if start >= end:
+        if arr[end] == ele:
+            return True, end
+        else:
+            return False, None
+
+    mid = ((end - start) // 2) + start
+
+    if arr[mid] == ele:
+        return True, mid
+    
+    elif arr[mid] > ele:
+        return bsearch(arr, start, mid, ele)
+    
+    elif arr[mid] < ele:
+        return bsearch(arr, mid+1, end, ele)
+    
+
+
+
+
 def binary_search(arr, ele):
-    pass
+    return bsearch(arr, 0, len(arr)-1, ele)
+    
+
+    
