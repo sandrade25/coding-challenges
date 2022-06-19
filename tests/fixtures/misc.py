@@ -69,4 +69,8 @@ def binary_tree():
 
 @pytest.fixture
 def unsorted_list():
-    return [random.randint(1, 100) for i in range(100)]
+    return [random.randint(1, 100) for i in range(250)]
+
+@pytest.fixture
+def sorted_list():
+    return [i for i in range(250)]
