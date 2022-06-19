@@ -2,6 +2,7 @@ import pytest
 import sys
 sys.path.append("../../")
 from useables.linked_node import DoubleLinkedList, LinkedNode, DoubleLinkedNode, LinkedList
+import random
 
 @pytest.fixture
 def list_of_words():
@@ -64,3 +65,8 @@ def binary_tree():
         "k": [],
         "l": []
     }
+
+
+@pytest.fixture
+def unsorted_list():
+    return [random.randint(1, 100) for i in range(100)]
