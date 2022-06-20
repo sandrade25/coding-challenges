@@ -119,18 +119,6 @@ class TestArrays:
 
         assert l2 == l1
 
-    @pytest.mark.skip(reason="not yet implemented")
-    def test_array_manipulation(self):
-        raise NotImplementedError
-
-    @pytest.mark.skip(reason="not yet implemented")
-    def test_minimum_swaps(self):
-        raise NotImplementedError
-
-    @pytest.mark.skip(reason="not yet implemented")
-    def test_two_d_array(self):
-        raise NotImplementedError
-
     
 
 
