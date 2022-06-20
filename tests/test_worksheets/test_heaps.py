@@ -18,7 +18,6 @@ class TestHeaps:
         user1 = unsorted_list.copy()
         original = answer1.copy()
 
-        breakpoint()
         assert user1 == answer1
         generate_max_heap_from_array_a(answer1)
         assert original != answer1
