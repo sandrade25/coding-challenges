@@ -8,9 +8,7 @@ from worksheets.trees.breadth_first_traversal import breadth_first_traversal
 from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
 from worksheets.trees.depth_first_traversal import depth_first_traversal
 from worksheets_answers.trees.binary_verification import binary_verification as binary_verification_a
-from worksheets_answers.trees.breadth_first_island_count import breadth_first_island_count as breadth_first_island_count_a
 from worksheets_answers.trees.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
-from worksheets_answers.trees.depth_first_cycle import depth_first_cycle as depth_first_cycle_a
 from worksheets_answers.trees.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
 
 
