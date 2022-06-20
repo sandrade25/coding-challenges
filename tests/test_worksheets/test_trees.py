@@ -2,12 +2,12 @@ import pytest
 import sys
 sys.path.append("../../")
 import random
-from worksheets.trees.binary_verification import binary_verification
+
 from worksheets.zchallenges.breadth_first_island_count import breadth_first_island_count
 from worksheets.trees.breadth_first_traversal import breadth_first_traversal
 from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
 from worksheets.trees.depth_first_traversal import depth_first_traversal
-from worksheets_answers.trees.binary_verification import binary_verification as binary_verification_a
+
 from worksheets_answers.trees.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
 from worksheets_answers.trees.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
 
@@ -41,12 +41,6 @@ class TestTrees:
 
         assert user1 == answer1
         assert user2 == answer2
-
-    @pytest.mark.skip(reason="not yet implemented")
-    def test_binary_verification(self):
-        raise NotImplementedError
-
-    
 
 
         
