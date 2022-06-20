@@ -20,7 +20,7 @@ def bsearch(arr, start, end, ele):
         return True, mid
     
     elif arr[mid] > ele:
-        return bsearch(arr, start, mid, ele)
+        return bsearch(arr, start, mid-1, ele)
     
     elif arr[mid] < ele:
         return bsearch(arr, mid+1, end, ele)
