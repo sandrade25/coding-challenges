@@ -74,7 +74,7 @@ class TestLinkedLists:
         original_order = get_data_order(double_linked_list)
         answer1 = insert_double_linked_list_a(double_linked_list, 100, 1111)
         answer1_order = get_data_order(answer1)
-        assert answer1_order == original_order
+        assert answer1_order == original_order + [1111]
 
         answer2 = insert_double_linked_list_a(double_linked_list, 5, 1111)
         answer2_order = get_data_order(answer2)
@@ -107,7 +107,7 @@ class TestLinkedLists:
         original_order = get_data_order(linked_list)
         answer1 = insert_linked_list_a(linked_list, 100, 1111)
         answer1_order = get_data_order(answer1)
-        assert answer1_order == original_order
+        assert answer1_order == original_order + [1111]
 
         answer2 = insert_linked_list_a(linked_list, 5, 1111)
         answer2_order = get_data_order(answer2)

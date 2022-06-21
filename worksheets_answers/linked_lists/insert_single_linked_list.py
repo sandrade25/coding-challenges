@@ -17,9 +17,9 @@ def insert_linked_list(llist, position, data):
         node = node.next
         curr_position += 1
 
-    if curr_position == position and node:
-        new_node = LinkedNode(data=data, next_node=node)
-        prev_node.next = new_node
+    
+    new_node = LinkedNode(data=data, next_node=node)
+    prev_node.next = new_node
 
     return llist
 
