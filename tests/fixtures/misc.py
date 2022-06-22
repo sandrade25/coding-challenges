@@ -74,3 +74,14 @@ def unsorted_list():
 @pytest.fixture(scope="function")
 def sorted_list():
     return [i for i in range(250)]
+
+@pytest.fixture(scope="function")
+def weighted_graph():
+    return {
+    's': {'a': 2, 'b': 1},
+    'a': {'s': 3, 'b': 4, 'c': 8},
+    'b': {'s': 4, 'a': 2, 'd': 2},
+    'c': {'a': 2, 'd': 7, 't': 4},
+    'd': {'b': 1, 'c': 11, 't': 5},
+    't': {'c': 3, 'd': 5}
+}
