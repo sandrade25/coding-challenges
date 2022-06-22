@@ -29,6 +29,9 @@ class TestZChallenges:
         assert user1 is not None, "solution not yet provided"
         user2 = two_d_array(board, words_list_false)
 
+        assert answer1 == user1
+        assert answer2 == user2
+
 
     
 
