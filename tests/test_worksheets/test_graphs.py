@@ -12,10 +12,10 @@ class TestGraphs:
         answer2 = dijkstras_shortest_path_a(weighted_graph, "t", "b")
         answer3 = dijkstras_shortest_path_a(weighted_graph, "d", "s")
 
-        user1 = dijkstras_shortest_path_a(weighted_graph, "s", "t")
+        user1 = dijkstras_shortest_path(weighted_graph, "s", "t")
         assert user1 is not None, "solution not yet provided"
-        user2 = dijkstras_shortest_path_a(weighted_graph, "t", "b")
-        user3 = dijkstras_shortest_path_a(weighted_graph, "d", "s")
+        user2 = dijkstras_shortest_path(weighted_graph, "t", "b")
+        user3 = dijkstras_shortest_path(weighted_graph, "d", "s")
         
         assert user1 == answer1
         assert user2 == answer2
