@@ -33,11 +33,11 @@ def make_graph(arr):
         
     return g
 
-def dfs(graph, node, visited=[], parent=-1):
+def dfs(graph, node, visited, parent=-1):
 
-    visited.append(node)
+    visited[node] = True
     for next_node in graph[node]:
-        if next_node not in visited:
+        if not visited[next_node]:
             if dfs(graph, next_node, visited, node):
                 return True
         elif next_node != parent:
@@ -47,5 +47,6 @@ def dfs(graph, node, visited=[], parent=-1):
 
 def depth_first_cycle(graph_arr):
     graph = make_graph(graph_arr)
-    return dfs(graph, graph_arr[0][0], [])
+    visited = {node: False for node in graph}
+    return dfs(graph, graph_arr[0][0], visited)
 
