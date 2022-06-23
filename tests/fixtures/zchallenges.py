@@ -16,4 +16,15 @@ def word_board():
 
 
 
+@pytest.fixture(scope="function")
+def binary_grid1():
+    return [[0, 0, 1, 1], [0, 0, 1, 0], [0, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
 
+@pytest.fixture(scope="function")
+def binary_grid2():
+    return [[1, 1, 0, 0], [0, 1, 1, 0], [0, 0, 1, 0], [1, 0, 0, 0]]
+
+
+@pytest.fixture(scope="function")
+def binary_grid3():
+    return [[1, 0, 1, 1, 0], [1, 1, 0, 0, 1], [0, 1, 1, 1, 0], [0, 0, 0, 0, 1], [1, 1, 1, 0, 0]]
