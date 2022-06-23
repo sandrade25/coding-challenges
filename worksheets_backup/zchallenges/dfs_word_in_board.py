@@ -10,5 +10,5 @@ representing if each word in words can be traced in the board
 or not.
 """
 
-def two_d_array(board, words):
+def dfs_word_in_board(board, words):
     pass

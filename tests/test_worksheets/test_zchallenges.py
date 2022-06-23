@@ -10,8 +10,8 @@ import random
 # from worksheets.zchallenges.matrix import 
 # from worksheets.zchallenges.minimum_swaps_2 import 
 # from worksheets.zchallenges.roads_and_libraries import 
-from worksheets.zchallenges.two_d_array import two_d_array
-from worksheets_answers.zchallenges.two_d_array import two_d_array as two_d_array_a
+from worksheets.zchallenges.dfs_word_in_board import dfs_word_in_board
+from worksheets_answers.zchallenges.dfs_word_in_board import dfs_word_in_board as dfs_word_in_board_a
 from worksheets.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid
 from worksheets_answers.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid as dfs_connected_cell_in_grid_a
 
@@ -20,16 +20,16 @@ from worksheets_answers.zchallenges.dfs_connected_cell_in_grid import dfs_connec
 
 
 class TestZChallenges:
-    def test_two_d_array(self, word_board):
+    def test_dfs_word_in_board(self, word_board):
         board, words_in_board = word_board
         words_list_false = ['float', 'buy', 'trumpet', 'parked', 'interrupt']
         
-        answer1 = two_d_array_a(board, words_in_board)
-        answer2 = two_d_array_a(board, words_list_false)
+        answer1 = dfs_word_in_board_a(board, words_in_board)
+        answer2 = dfs_word_in_board_a(board, words_list_false)
 
-        user1 = two_d_array(board, words_in_board)
+        user1 = dfs_word_in_board(board, words_in_board)
         assert user1 is not None, "solution not yet provided"
-        user2 = two_d_array(board, words_list_false)
+        user2 = dfs_word_in_board(board, words_list_false)
 
         assert answer1 == user1
         assert answer2 == user2

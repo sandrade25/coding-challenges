@@ -41,7 +41,7 @@ def dfs_partial(board, visited, word, rows, cols, starting_ix):
 
 
 
-def two_d_array(board, words):
+def dfs_word_in_board(board, words):
     bools = []
     rows = len(board)
     cols = len(board[0])
