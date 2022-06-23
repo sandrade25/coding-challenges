@@ -43,5 +43,22 @@ def binary_grid4():
         ]
 
 
+@pytest.fixture(scope="function")
+def graph_arr_with_cycle():
+    return [
+        (0, 1), (0, 6), (0, 7), (1, 2), (1, 5), (2, 3),
+        (2, 4), (7, 8), (7, 11), (8, 9), (8, 10), (10, 11)
+        # edge (10, 11) introduces a cycle in the graph
+    ]
+
+@pytest.fixture(scope="function")
+def graph_arr_no_cycle():
+    return [
+        (0, 1), (0, 6), (0, 7), (1, 2), (1, 5), (2, 3),
+        (2, 4), (7, 8), (7, 11), (8, 9), (8, 10)
+    ]
+
+
+
 
 

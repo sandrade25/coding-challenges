@@ -5,7 +5,7 @@ import random
 # from worksheets.zchallenges.array_manipulation import 
 # from worksheets.zchallenges.bfs_shortest_reach_in_graph import 
 # from worksheets.zchallenges.breadth_first_island_count import 
-# from worksheets.zchallenges.depth_first_cycle import 
+
 
 # from worksheets.zchallenges.matrix import 
 # from worksheets.zchallenges.minimum_swaps_2 import 
@@ -14,6 +14,8 @@ from worksheets.zchallenges.dfs_word_in_board import dfs_word_in_board
 from worksheets_answers.zchallenges.dfs_word_in_board import dfs_word_in_board as dfs_word_in_board_a
 from worksheets.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid
 from worksheets_answers.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid as dfs_connected_cell_in_grid_a
+from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
+from worksheets_answers.zchallenges.depth_first_cycle import depth_first_cycle as depth_first_cycle_a
 
 
 
@@ -54,6 +56,21 @@ class TestZChallenges:
         assert answer2 == user2
         assert answer3 == user3
         assert answer4 == user4
+
+    def test_depth_first_cycle(self, graph_arr_with_cycle, graph_arr_no_cycle):
+        answer1 = depth_first_cycle_a(graph_arr_with_cycle)
+        assert answer1 == True
+        answer2 = depth_first_cycle_a(graph_arr_no_cycle)
+        assert answer2 == False
+
+        user1 = depth_first_cycle(graph_arr_with_cycle)
+        assert user1 is not None, "solution not yet provided"
+        user2 = depth_first_cycle(graph_arr_no_cycle)
+
+
+        assert answer1 == user1
+        assert answer2 == user2
+
 
 
         
