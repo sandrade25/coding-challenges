@@ -18,7 +18,13 @@ def word_board():
 
 @pytest.fixture(scope="function")
 def binary_grid1():
-    return [[0, 0, 1, 1], [0, 0, 1, 0], [0, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
+    return [
+        [0, 0, 1, 1], 
+        [0, 0, 1, 0], 
+        [0, 1, 1, 0], 
+        [0, 1, 0, 0], 
+        [1, 1, 0, 0]
+        ]
 
 @pytest.fixture(scope="function")
 def binary_grid2():
@@ -42,6 +48,20 @@ def binary_grid4():
         [0, 1, 0, 0, 0, 1, 0, 0]
         ]
 
+@pytest.fixture(scope="function")
+def binary_grid5():
+    return [
+        [1, 0, 1, 0, 0, 0, 1, 1, 1, 1],
+        [0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 1, 0, 0, 0],
+        [1, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 1, 1, 1],
+        [0, 1, 0, 1, 0, 0, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 1, 0, 0, 1, 1, 1, 0],
+        [1, 0, 1, 0, 1, 0, 0, 1, 0, 0],
+        [1, 1, 1, 1, 0, 0, 0, 1, 1, 1]
+    ]
 
 @pytest.fixture(scope="function")
 def graph_arr_with_cycle():

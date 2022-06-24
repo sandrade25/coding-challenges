@@ -4,7 +4,7 @@ sys.path.append("../../")
 import random
 # from worksheets.zchallenges.array_manipulation import 
 # from worksheets.zchallenges.bfs_shortest_reach_in_graph import 
-# from worksheets.zchallenges.breadth_first_island_count import 
+
 
 
 # from worksheets.zchallenges.matrix import 
@@ -16,6 +16,8 @@ from worksheets.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell
 from worksheets_answers.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid as dfs_connected_cell_in_grid_a
 from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
 from worksheets_answers.zchallenges.depth_first_cycle import depth_first_cycle as depth_first_cycle_a
+from worksheets.zchallenges.breadth_first_island_count import breadth_first_island_count
+from worksheets_answers.zchallenges.breadth_first_island_count import breadth_first_island_count as breadth_first_island_count_a
 
 
 
@@ -70,6 +72,31 @@ class TestZChallenges:
 
         assert answer1 == user1
         assert answer2 == user2
+
+    def test_breadth_first_island_count(self, binary_grid1, binary_grid2, binary_grid3, binary_grid4, binary_grid5):
+        answer1 = breadth_first_island_count_a(binary_grid1)
+        assert answer1 == 1
+        answer2 = breadth_first_island_count_a(binary_grid2)
+        assert answer2 == 2
+        answer3 = breadth_first_island_count_a(binary_grid3)
+        assert answer3 == 2
+        answer4 = breadth_first_island_count_a(binary_grid4)
+        assert answer4 == 13
+        answer5 = breadth_first_island_count_a(binary_grid5)
+        assert answer5 == 5
+
+        user1 = breadth_first_island_count(binary_grid1)
+        assert user1 is not None, "solution not yet provided"
+        user2 = breadth_first_island_count(binary_grid2)
+        user3 = breadth_first_island_count(binary_grid3)
+        user4 = breadth_first_island_count(binary_grid4)
+        user5 = breadth_first_island_count(binary_grid5)
+
+        assert answer1 == user1
+        assert answer2 == user2
+        assert answer3 == user3
+        assert answer4 == user4
+        assert answer5 == user5
 
 
 
