@@ -15,7 +15,7 @@ def dfs(board, word, v, rows, cols, row, col):
     if len(word) <= 1:
         return True
 
-    v[row][col] = True
+    v[(row, col)] = True
     next = word[1]
 
     possible_moves = [(row  + nrow, col + ncol) for nrow, ncol in moves]
@@ -26,6 +26,8 @@ def dfs(board, word, v, rows, cols, row, col):
             continue
         if ncol < 0 or ncol >= cols:
             continue
+        if v[(nrow, ncol)]:
+                continue
 
         if next == board[nrow][ncol]:
             visited = v.copy()
@@ -39,9 +41,10 @@ def dfs(board, word, v, rows, cols, row, col):
 
 def dfs_word_in_board(board, words):
     bools = []
-    visited = [[False for j in range(len(board[0]))] for i in range(len(board))]
     rows = len(board)
     cols = len(board[0])
+
+    v ={(i,j):False for j in range(cols) for i in range(rows)}
 
     for word in words:
         found = False
@@ -49,13 +52,12 @@ def dfs_word_in_board(board, words):
         for i in range(rows):
             for j in range(cols):
                 if board[i][j] == word[0]:
-                    v = visited.copy()
-                    if dfs(board, word, v, rows, cols, i,j):
+                    visited = v.copy()
+                    if dfs(board, word, visited, rows, cols, i,j):
                         found = True
                         break
             if found:
                 break
             
         bools.append(found)
-
     return bools
