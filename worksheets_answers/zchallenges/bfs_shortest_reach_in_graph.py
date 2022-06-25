@@ -29,7 +29,7 @@ some similarities here with dijkstras shortest path
 """
 from collections import OrderedDict, deque
 def make_graph(node_count, edges):
-    graph = OrderedDict({i+1:[] for i in range(node_count)})
+    graph = OrderedDict({i:[] for i in range(node_count)})
 
     for parent, child in edges:
         graph[parent].append(child)
@@ -48,7 +48,8 @@ def bfs_shortest_reach_in_graph(edges, node_count, start):
     while queue:
         node = queue.popleft()
         for n in graph[node]:
-            if node_distances[n] > node_distances[node] + 6 or node_distances[n] == -1 and node != parent_nodes[n]:
+            
+            if node_distances[n] == -1 or node_distances[n] > node_distances[node] + 6 and node != parent_nodes[n]:
                 node_distances[n] = node_distances[node] + 6
                 parent_nodes[n] = node
                 queue.append(n)

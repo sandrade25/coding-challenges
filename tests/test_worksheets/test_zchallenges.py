@@ -98,24 +98,21 @@ class TestZChallenges:
         assert answer5 == user5
 
     def test_bfs_shortest_reach_in_graph(self, graph_arr_with_cycle, graph_arr_no_cycle):
-        cycle_starts_1 = [(nrow+1, ncol+1) for nrow, ncol in graph_arr_with_cycle]
-        no_cycle_starts_1 = [(nrow+1, ncol+1) for nrow, ncol in graph_arr_no_cycle]
 
-
-        answer1 = bfs_shortest_reach_in_graph_a(cycle_starts_1, 13, 1)
+        answer1 = bfs_shortest_reach_in_graph_a(graph_arr_with_cycle, 13, 0)
         assert answer1 == [6, 12, 18, 18, 12, 6, 6, 12, 18, 18, 12, -1]
-        answer2 = bfs_shortest_reach_in_graph_a(no_cycle_starts_1, 13, 1)
+        answer2 = bfs_shortest_reach_in_graph_a(graph_arr_no_cycle, 13, 0)
         assert answer2 == [6, 12, 18, 18, 12, 6, 6, 12, 18, 18, 12, -1]
-        answer3 = bfs_shortest_reach_in_graph_a(cycle_starts_1, 12, 1)
+        answer3 = bfs_shortest_reach_in_graph_a(graph_arr_with_cycle, 12, 0)
         assert answer3 == [6, 12, 18, 18, 12, 6, 6, 12, 18, 18, 12]
-        answer4 = bfs_shortest_reach_in_graph_a(no_cycle_starts_1, 12, 1)
+        answer4 = bfs_shortest_reach_in_graph_a(graph_arr_no_cycle, 12, 0)
         assert answer4 == [6, 12, 18, 18, 12, 6, 6, 12, 18, 18, 12]
 
-        user1 = bfs_shortest_reach_in_graph(cycle_starts_1, 13, 1)
+        user1 = bfs_shortest_reach_in_graph(graph_arr_with_cycle, 13, 0)
         assert user1 is not None, "solution not yet provided"
-        user2 = bfs_shortest_reach_in_graph(no_cycle_starts_1, 13, 1)
-        user3 = bfs_shortest_reach_in_graph(cycle_starts_1, 12, 1)
-        user4 = bfs_shortest_reach_in_graph(no_cycle_starts_1, 12, 1)
+        user2 = bfs_shortest_reach_in_graph(graph_arr_no_cycle, 13, 0)
+        user3 = bfs_shortest_reach_in_graph(graph_arr_with_cycle, 12, 0)
+        user4 = bfs_shortest_reach_in_graph(graph_arr_no_cycle, 12, 0)
 
 
         assert answer1 == user1
