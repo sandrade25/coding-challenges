@@ -1,6 +1,6 @@
 import sys
 sys.path.append("../../")
-from useables.linked_node import DoubleLinkedNode
+from protected.useables.linked_node import DoubleLinkedNode
 
 
 """

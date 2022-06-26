@@ -8,8 +8,8 @@ from worksheets.trees.breadth_first_traversal import breadth_first_traversal
 from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
 from worksheets.trees.depth_first_traversal import depth_first_traversal
 
-from worksheets_answers.trees.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
-from worksheets_answers.trees.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
+from protected.worksheets_answers.trees.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
+from protected.worksheets_answers.trees.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
 
 
 

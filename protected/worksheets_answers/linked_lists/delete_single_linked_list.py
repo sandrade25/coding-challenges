@@ -1,15 +1,15 @@
 import sys
 sys.path.append("../../")
-from useables.linked_node import DoubleLinkedNode
+from protected.useables.linked_node import LinkedNode
 
 
 
 """
-given a double linked list,
+given a linked list,
 delete an element at position and ensure linked list is intact.
 """
 
-def delete_double_linked_list(llist, position):
+def delete_linked_list(llist, position):
     node = llist.head
     curr_position = 0
     prev_node = None
@@ -21,8 +21,6 @@ def delete_double_linked_list(llist, position):
 
     if curr_position == position and node:
         next = node.next
-        prev_node.next  = next
-        next.prev = prev_node
+        prev_node.next = next
 
     return llist
-    

@@ -4,15 +4,15 @@ import sys
 
 sys.path.append("../../")
 import random
-from worksheets_answers.arrays.binary_search import binary_search as binary_search_a
+from protected.worksheets_answers.arrays.binary_search import binary_search as binary_search_a
 from worksheets.arrays.binary_search import binary_search
-from worksheets_answers.arrays.insertion_sort import insertion_sort as insertion_sort_a
+from protected.worksheets_answers.arrays.insertion_sort import insertion_sort as insertion_sort_a
 from worksheets.arrays.insertion_sort import insertion_sort
-from worksheets_answers.arrays.merge_sort import merge_sort as merge_sort_a
+from protected.worksheets_answers.arrays.merge_sort import merge_sort as merge_sort_a
 from worksheets.arrays.merge_sort import merge_sort
-from worksheets_answers.arrays.quick_sort import quick_sort as quick_sort_a
+from protected.worksheets_answers.arrays.quick_sort import quick_sort as quick_sort_a
 from worksheets.arrays.quick_sort import quick_sort
-from worksheets_answers.arrays.heap_sort import heap_sort as heap_sort_a
+from protected.worksheets_answers.arrays.heap_sort import heap_sort as heap_sort_a
 from worksheets.arrays.heap_sort import heap_sort
 
 class TestArrays:

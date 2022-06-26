@@ -6,10 +6,10 @@ from worksheets.misc.fibonnaci import fibonnaci
 from worksheets.misc.make_trie_from_words import make_trie
 from worksheets.misc.get_words_from_trie import get_words_from_trie
 from worksheets.misc.longest_common_substring import longest_common_substring
-from worksheets_answers.misc.fibonnaci import fibonnaci as fibonnaci_a
-from worksheets_answers.misc.make_trie_from_words import make_trie as make_trie_a
-from worksheets_answers.misc.get_words_from_trie import get_words_from_trie as get_words_from_trie_a
-from worksheets_answers.misc.longest_common_substring import longest_common_substring as longest_common_substring_a
+from protected.worksheets_answers.misc.fibonnaci import fibonnaci as fibonnaci_a
+from protected.worksheets_answers.misc.make_trie_from_words import make_trie as make_trie_a
+from protected.worksheets_answers.misc.get_words_from_trie import get_words_from_trie as get_words_from_trie_a
+from protected.worksheets_answers.misc.longest_common_substring import longest_common_substring as longest_common_substring_a
 
 
 

@@ -1,6 +1,6 @@
 import sys
 sys.path.append("../../")
-from useables.linked_node import LinkedNode
+from protected.useables.linked_node import LinkedNode
 
 
 """

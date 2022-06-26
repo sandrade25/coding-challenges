@@ -1,7 +1,7 @@
 import pytest
 import sys
 sys.path.append("../../")
-from useables.linked_node import DoubleLinkedList, LinkedNode, DoubleLinkedNode, LinkedList
+from protected.useables.linked_node import DoubleLinkedList, LinkedNode, DoubleLinkedNode, LinkedList
 import random
 
 @pytest.fixture(scope="function")

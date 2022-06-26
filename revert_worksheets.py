@@ -4,7 +4,7 @@ import typer
 
 def main():
     typer.confirm("are you sure you want to revert all worksheet files?", abort = True)
-    src_directory = r"./worksheets_backup/"
+    src_directory = r"./protected/worksheets_backup/"
     dst_directory = r"./worksheets/"
 
 

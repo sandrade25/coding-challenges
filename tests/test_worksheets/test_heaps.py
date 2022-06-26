@@ -2,8 +2,8 @@ import pytest
 import sys
 sys.path.append("../../")
 import random
-from worksheets_answers.heaps.generate_max_heap_from_array import generate_max_heap_from_array as generate_max_heap_from_array_a
-from worksheets_answers.heaps.generate_min_heap_from_array import generate_min_heap_from_array as generate_min_heap_from_array_a
+from protected.worksheets_answers.heaps.generate_max_heap_from_array import generate_max_heap_from_array as generate_max_heap_from_array_a
+from protected.worksheets_answers.heaps.generate_min_heap_from_array import generate_min_heap_from_array as generate_min_heap_from_array_a
 
 from worksheets.heaps.generate_max_heap_from_array import generate_max_heap_from_array
 from worksheets.heaps.generate_min_heap_from_array import generate_min_heap_from_array
