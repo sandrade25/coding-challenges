@@ -1,5 +1,7 @@
 import pytest
 import sys
+
+
 sys.path.append("../../")
 import random
 from worksheets_answers.arrays.binary_search import binary_search as binary_search_a
@@ -10,6 +12,8 @@ from worksheets_answers.arrays.merge_sort import merge_sort as merge_sort_a
 from worksheets.arrays.merge_sort import merge_sort
 from worksheets_answers.arrays.quick_sort import quick_sort as quick_sort_a
 from worksheets.arrays.quick_sort import quick_sort
+from worksheets_answers.arrays.heap_sort import heap_sort as heap_sort_a
+from worksheets.arrays.heap_sort import heap_sort
 
 class TestArrays:
     def test_binary_search(self, sorted_list):
@@ -120,7 +124,28 @@ class TestArrays:
         assert l2 == l1
 
     
+    def test_heap_sort(self, unsorted_list):
+        l1 = unsorted_list.copy()
+        l1_a = l1.copy()
+        l1_a.sort()
 
+        l2 = unsorted_list.copy()
+        l2_a = l2.copy()
+        l2_a.sort()
+
+        assert l1 == l2
+        assert l1_a != l1
+        assert l2_a != l2
+        assert l2_a == l1_a
+
+        heap_sort_a(l1)
+        assert l1_a == l1
+
+        test = heap_sort(l2)
+        assert test != "not implemented", "solution not yet provided"
+        assert l2_a == l2
+
+        assert l2 == l1
 
 
 
