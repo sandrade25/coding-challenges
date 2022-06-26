@@ -1,5 +1,14 @@
 # coding-challenges for the sake of studying/practicing for FAANG related tests
 
+## setup:
+- clone repo to your local machine
+- cd into directory
+- run `pip install -r requirements.txt`
+- run `python complete_answers.py` and when prompted press `y`
+- run `pytest`
+  - should see X tests passed. all green. All tests passed.
+- run `python revert_worksheets.py` and when prompted press `y`
+- ready to go
 
 ## Instructions:
 - complete all the worksheets in directory `./worksheets/`
