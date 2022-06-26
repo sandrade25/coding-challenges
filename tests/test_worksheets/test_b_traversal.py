@@ -1,20 +1,19 @@
 import pytest
 import sys
+
+
 sys.path.append("../../")
 import random
 
-from worksheets.zchallenges.breadth_first_island_count import breadth_first_island_count
-from worksheets.trees.breadth_first_traversal import breadth_first_traversal
-from worksheets.zchallenges.depth_first_cycle import depth_first_cycle
-from worksheets.trees.depth_first_traversal import depth_first_traversal
 
-from protected.worksheets_answers.trees.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
-from protected.worksheets_answers.trees.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
+from worksheets.b_traversal.breadth_first_traversal import breadth_first_traversal
+from worksheets.b_traversal.depth_first_traversal import depth_first_traversal
 
+from protected.worksheets_answers.b_traversal.breadth_first_traversal import breadth_first_traversal as breadth_first_traversal_a
+from protected.worksheets_answers.b_traversal.depth_first_traversal import depth_first_traversal as depth_first_traversal_a
 
 
-
-class TestTrees:
+class TestTraversal:
     def test_depth_first_traversal(self, graph, binary_tree):
         answer1 = []
         depth_first_traversal_a(graph, 'a', answer1)
@@ -42,10 +41,7 @@ class TestTrees:
         assert user1 == answer1
         assert user2 == answer2
 
-
-        
-
-
+    
 
 
 
