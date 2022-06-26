@@ -17,5 +17,5 @@ in some cases it may be cheaper to build libraries in each city.
 """
 from collections import deque
 
-def roads_and_libraries(n, c_lib, c_road, cities):
+def roads_and_libraries(cities, n, c_lib, c_road, ):
     pass
