@@ -8,47 +8,38 @@
   - run `pytest tests/test_worksheets/test_{worksheet section}.py` to test a specific section you are working on. 
   - you can add `::Test{class name}::test_{function name}` to test a specific function worksheet you are working on.
 - if you wish to revert your worksheets back to empty, run: `python revert_worksheets.py`
+- if you wish to see all the answers populated into the worksheets, run: `python complete_answers.py`
 - ATTENTION! 
   - You should only have to modify the code within the files in `worksheets/` if you believe you have to touch any of the other files outside that directory, please contact owner.
   - or if you feel comfortable and have the appropriate access, you can submit an issue, or put in a PullRequest for a new branch as needed.
 ----
 
 ## Material covered:
+Worksheets are grouped into categories (a_basics, b_traversal .. z_category) and ordered by group level (a, b, c .. z)
 
-### data structures:
-- arrays
-- queues*
-- stacks*
-- trees
-- hash tables*
-- graphs
-- binary trees
-- tries
-  
-### algorithms:
-- traversals
-- divide and conquer
-- breadth first search
-- depth first search
-- quick sort
-- insertion sort
-- bubble sort
-- merge sort
-
-### must have priorities:
-- hash tables
-- linked lists
-- big O notation
-- trees (especially binary trees)
-- breadth first and depth first search. 
-- binary search
-- merge sort
-- quick sort
-- arrays
+### basics:
+- dynamic programming
 - recursion
-- stacks/queues
--  Questions involving bit manipulation are rare but are encountered from time to time.
+- heaps
+- linked lists
+- tri
 
+### traversal:
+- breadth first traversal
+- depth first traversal
 
------
-`* will come later`
+### search:
+- binary search on sorted array
+
+### sorting:
+- heap sort
+- insertion sort
+- merge sort
+- quick sort
+
+### algo group 1
+- various challenges
+
+### algo group 2
+- various challenges
+
