@@ -6,7 +6,8 @@ import random
 
 # from worksheets.zchallenges.matrix import 
 # from worksheets.zchallenges.minimum_swaps_2 import 
-# from worksheets.zchallenges.roads_and_libraries import 
+from worksheets.zchallenges.roads_and_libraries import roads_and_libraries
+from worksheets_answers.zchallenges.roads_and_libraries import roads_and_libraries as roads_and_libraries_a
 from worksheets.zchallenges.dfs_word_in_board import dfs_word_in_board
 from worksheets_answers.zchallenges.dfs_word_in_board import dfs_word_in_board as dfs_word_in_board_a
 from worksheets.zchallenges.dfs_connected_cell_in_grid import dfs_connected_cell_in_grid
@@ -17,6 +18,8 @@ from worksheets.zchallenges.breadth_first_island_count import breadth_first_isla
 from worksheets_answers.zchallenges.breadth_first_island_count import breadth_first_island_count as breadth_first_island_count_a
 from worksheets.zchallenges.bfs_shortest_reach_in_graph import  bfs_shortest_reach_in_graph
 from worksheets_answers.zchallenges.bfs_shortest_reach_in_graph import  bfs_shortest_reach_in_graph as bfs_shortest_reach_in_graph_a
+
+
 
 
 
@@ -113,6 +116,29 @@ class TestZChallenges:
         user2 = bfs_shortest_reach_in_graph(graph_arr_no_cycle, 13, 0)
         user3 = bfs_shortest_reach_in_graph(graph_arr_with_cycle, 12, 0)
         user4 = bfs_shortest_reach_in_graph(graph_arr_no_cycle, 12, 0)
+
+
+        assert answer1 == user1
+        assert answer2 == user2
+        assert answer3 == user3
+        assert answer4 == user4
+
+    def test_roads_and_libraries(self, graph_arr_with_cycle, graph_arr_no_cycle):
+
+        answer1 = roads_and_libraries_a(graph_arr_with_cycle, 13, 5, 1 )
+        assert answer1 == 31
+        answer2 = roads_and_libraries_a(graph_arr_no_cycle, 13, 6, 2)
+        assert answer2 == 46
+        answer3 = roads_and_libraries_a(graph_arr_with_cycle, 12, 5, 1)
+        assert answer3 == 26
+        answer4 = roads_and_libraries_a(graph_arr_no_cycle, 12, 7, 8)
+        assert answer4 == 84
+
+        user1 = roads_and_libraries(graph_arr_with_cycle, 13, 5, 1)
+        assert user1 is not None, "solution not yet provided"
+        user2 = roads_and_libraries(graph_arr_no_cycle, 13, 6, 2)
+        user3 = roads_and_libraries(graph_arr_with_cycle, 12, 5, 1)
+        user4 = roads_and_libraries(graph_arr_no_cycle, 12, 7, 8)
 
 
         assert answer1 == user1
