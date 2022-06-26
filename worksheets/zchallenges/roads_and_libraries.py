@@ -9,7 +9,7 @@ c_lib = cost of each library
 c_road = cost of each road to connect two cities
 cities = array of possible connections between cities represented as edges ([parent, child])
 
-calculate the minimum cost to ensure every city has access to a library.
+calculate the minimum cost to ensure every city (numbered 0 to n) has access to a library.
 a city has access if it can travel any number of roads to get to a city with a library built within. 
 
 in some cases it may be cheaper to build libraries in each city.
