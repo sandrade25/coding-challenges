@@ -14,15 +14,19 @@ def delete_double_linked_list(llist, position):
     curr_position = 0
     prev_node = None
 
-    while node and curr_position < position:
+    while node.next and curr_position < position:
         prev_node = node
         node = node.next
         curr_position += 1
 
-    if curr_position == position and node:
-        next = node.next
-        prev_node.next  = next
-        next.prev = prev_node
+    if curr_position == position:
+        next_node = node.next
+        if prev_node:
+            prev_node.next = next_node
+            next_node.prev = prev_node
+        else:
+            llist.head = next_node
+            next_node.prev = None
+        del node
 
     return llist
-    

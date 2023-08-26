@@ -80,6 +80,10 @@ class TestBasics:
         answer2_order = get_data_order(answer2)
         answer2.revert()
 
+        answer3 = delete_double_linked_list_a(double_linked_list, 0)
+        answer3_order = get_data_order(answer3)
+        answer3.revert()
+
         user_answer1 = delete_double_linked_list(double_linked_list, 100)
         assert user_answer1 is not None, "solution not yet provided"
 
@@ -89,8 +93,13 @@ class TestBasics:
         user_answer2_order = get_data_order(user_answer2)
         user_answer2.revert()
 
+        user_answer3 = delete_double_linked_list(double_linked_list, 0)
+        user_answer3_order = get_data_order(user_answer3)
+        user_answer3.revert()
+        
         assert user_answer1_order == answer1_order
         assert user_answer2_order == answer2_order
+        assert user_answer3_order == answer3_order
         
     def test_delete_linked_list(self, linked_list):
         original_order = get_data_order(linked_list)
